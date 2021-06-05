@@ -2,13 +2,13 @@ import React from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import TextField from "@material-ui/core/TextField";
+
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import {useState} from 'react'
 
-import {Redirect, useHistory} from "react-router-dom"
+import {useHistory} from "react-router-dom"
 
 
 
@@ -81,7 +81,7 @@ const App = () => {
       })
       .then(
         (response) => {
-          if(response.data.status==400){
+          if(response.data.status===400){
             alert('Wrong Credentials')
           }
           else{
